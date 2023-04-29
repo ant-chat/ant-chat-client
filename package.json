@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "name": "ant-chat-client",
+  "version": "0.0.0",
+  "license": "NOLICENSE",
+  "scripts": {
+    "start": "pnpm dev",
+    "dev": "tauri dev",
+    "build": "tauri build",
+    "dev:front": "vite",
+    "build:front": "vite build"
+  },
+  "dependencies": {
+    "solid-js": "^1.7.0",
+    "@tauri-apps/api": "^1.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.10",
+    "typescript": "^4.9.5",
+    "vite": "^4.2.1",
+    "vite-plugin-solid": "^2.5.0",
+    "@tauri-apps/cli": "^1.2.3"
+  }
+}
