@@ -1,0 +1,30 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true,
+    "serviceworker": true,
+    "worker": true,
+    "commonjs": true
+  },
+  "extends": ["eslint:recommended"],
+  "rules": {},
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "overrides": [
+    {
+      "files": "*.{ts,tsx}",
+      "parser": "@typescript-eslint/parser",
+      "plugins": ["solid"],
+      "extends": [
+        "plugin:solid/typescript",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:solid/typescript"
+      ],
+      "rules": {}
+    }
+  ]
+}

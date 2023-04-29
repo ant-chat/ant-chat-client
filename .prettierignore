@@ -1,0 +1,13 @@
+# tauri directory
+src-tauri/
+
+# tauri 설정 파일은 ignore에서 제외한다.
+!src-tauri/tauri.conf.json
+
+public/
+
+dist/
+
+pnpm-lock.yaml
+
+.vscode/
