@@ -1,5 +1,4 @@
-// release mode 에서 Windows의 추가 콘솔창을 방지 합니다.
-// ## 절대 지우지 마세요!! ##
+// Prevents additional console window on Windows in release, DO NOT REMOVE!!
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
