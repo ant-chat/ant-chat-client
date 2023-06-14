@@ -6,6 +6,8 @@
   "scripts": {
     "start": "pnpm dev",
     "start:tauri": "tauri dev",
+    "start:redis": "sh scripts/run_redis.sh",
+    "start:surrealdb": "sh scripts/run_surrealdb.sh",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
