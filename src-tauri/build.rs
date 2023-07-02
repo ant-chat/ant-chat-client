@@ -1,3 +1,30 @@
-fn main() {
-  tauri_build::build()
+fn main() -> Result<(), Box<dyn std::error::Error>> {
+    tonic_build::configure().compile(
+        &[
+            "protobuf/model/attachment.proto",
+            "protobuf/model/category.proto",
+            "protobuf/model/channel.proto",
+            "protobuf/model/message.proto",
+            "protobuf/model/page.proto",
+            "protobuf/model/reaction.proto",
+            "protobuf/model/server.proto",
+            "protobuf/model/server_member.proto",
+            "protobuf/model/user.proto",
+            //---------------------------------------
+            "protobuf/user/user.proto",
+            "protobuf/server/server.proto",
+            "protobuf/server/member/server_member.proto",
+            "protobuf/server/category/category.proto",
+            "protobuf/channel/channel.proto",
+            "protobuf/message/message.proto",
+            "protobuf/message/reaction.proto",
+            "protobuf/auth/auth.proto",
+            "protobuf/account/account.proto",
+            "protobuf/connect/connect.proto",
+        ],
+        &["protobuf"],
+    )?;
+
+    tauri_build::build();
+    Ok(())
 }

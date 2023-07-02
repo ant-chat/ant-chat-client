@@ -2,15 +2,18 @@
 // ## 절대 지우지 마세요!! ##
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
-// Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
-#[tauri::command]
-fn greet(name: &str) -> String {
-    format!("Hello, {}! You've been greeted from Rust!", name)
-}
+mod handler;
+mod model;
+mod proto;
 
-fn main() {
+use handler::auth;
+
+#[tokio::main]
+async fn main() {
     tauri::Builder::default()
-        .invoke_handler(tauri::generate_handler![greet])
+        // .invoke_handler(tauri::generate_handler![greet])
+        .invoke_handler(tauri::generate_handler![auth::sign_up])
+        // .invoke_handler(tauri::generate_handler![auth_handler::sign_up])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
