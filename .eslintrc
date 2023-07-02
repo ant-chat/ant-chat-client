@@ -8,7 +8,7 @@
     "worker": true,
     "commonjs": true
   },
-  "extends": ["eslint:recommended", "plugin:svelte/recommended"],
+  "extends": ["eslint:recommended"],
   "rules": {},
   "parserOptions": {
     "ecmaVersion": "latest",
@@ -18,16 +18,13 @@
     {
       "files": "*.{ts,tsx}",
       "parser": "@typescript-eslint/parser",
-      "plugins": [],
-      "extends": ["plugin:@typescript-eslint/recommended"],
+      "plugins": ["solid"],
+      "extends": [
+        "plugin:solid/typescript",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:solid/typescript"
+      ],
       "rules": {}
-    },
-    {
-      "files": ["*.svelte"],
-      "parser": "svelte-eslint-parser",
-      "parserOptions": {
-        "parser": "@typescript-eslint/parser"
-      }
     }
   ]
 }

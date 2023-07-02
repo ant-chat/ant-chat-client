@@ -1,20 +1,15 @@
 {
-  "extends": "@tsconfig/svelte/tsconfig.json",
   "compilerOptions": {
+    "strict": true,
     "target": "ESNext",
-    "useDefineForClassFields": true,
     "module": "ESNext",
-    "resolveJsonModule": true,
-    "baseUrl": ".",
-    /**
-     * 기본적으로 `.svelte` 및 `.js` 파일에서 JS를 입력합니다. 
-     * JS에서 동적 유형을 사용하려면 checkJs를 비활성화하십시오. 
-     * allowJs를 false로 설정해도 `.svelte` 파일에서 JS를 사용할 수 있습니다.
-     */
-    "allowJs": true,
-    "checkJs": true,
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js",
+    "types": ["vite/client"],
+    "noEmit": true,
     "isolatedModules": true
-  },
-  "include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.js", "src/**/*.svelte"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  }
 }
