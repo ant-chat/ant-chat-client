@@ -1,0 +1,24 @@
+.inputContainer {
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: var(--ant-color-white);
+  border: 1px solid var(--ant-color-black);
+}
+
+.input {
+  border: none;
+  font-style: inherit;
+  width: 100%;
+  height: 100%;
+  display: block;
+  color: var(--ant-color-black);
+  outline: none;
+  background: transparent;
+  appearance: none;
+  padding: 0;
+  margin: 0;
+}
+
+.input::placeholder {
+  color: var(--ant-color-black);
+}

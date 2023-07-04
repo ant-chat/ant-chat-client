@@ -1,1 +1,10 @@
 @import './styles/normalize.css';
+
+:root {
+  --ant-color-white: #ffffff;
+  --ant-color-black: #171717;
+}
+
+* {
+  box-sizing: border-box;
+}
